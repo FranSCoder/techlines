@@ -64,7 +64,7 @@ const Navbar = () => {
         <Flex alignItems='center'>
           <Icon as={colorMode === 'light' ? MoonIcon : SunIcon} alignSelf='center' onClick={() => toggleColorMode()} />
           <Button as={ReactLink} to='/login' p={2} fontSize='sm' fontWeight={400} variant='link'>
-            Log In
+            Iniciar sesión
           </Button>
           <Button
             as={ReactLink}
