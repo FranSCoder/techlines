@@ -33,7 +33,7 @@ const Rating = ({ rating, numberOfReviews }) => {
         <StarIcon size={iconSize} w='14px' color={rating >= 5 ? 'orange.500' : 'gray.200'} />
       </HStack>
       <Text fontSize='md' fontWeight='bold' ml='4px'>
-        {`${numberOfReviews} ${numberOfReviews === 1 ? 'Review' : 'Reviews'}`}
+        {`${numberOfReviews} ${numberOfReviews === 1 ? 'Valoración' : 'Valoraciones'}`}
       </Text>
     </Flex>
   );
@@ -85,7 +85,7 @@ const ProductCard = ({ product }) => {
         )}
       </Box>
       <Flex mt='1' justifyContent='space-between' alignContent='center'>
-        <Link as={ReactLink} to={`/product${product._id}`} pt='2' cursor='pointer'>
+        <Link as={ReactLink} to={`/product/${product._id}`} pt='2' cursor='pointer'>
           <Box fontSize='2xl' fontWeight='semibold' lineHeight='tight'>
             {product.name}
           </Box>
