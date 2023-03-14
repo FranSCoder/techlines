@@ -10,11 +10,11 @@ export const getProducts = () => async (dispatch) => {
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.data.message
+        error.response && error.response.data.message
           ? error.response.data.message
           : error.message
           ? error.message
-          : 'An unexpected error has occurred. Please try again later.'
+          : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
       )
     );
   }
@@ -28,11 +28,11 @@ export const getProduct = (id) => async (dispatch) => {
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.data.message
+        error.response && error.response.data.message
           ? error.response.data.message
           : error.message
           ? error.message
-          : 'An unexpected error has occurred. Please try again later.'
+          : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
       )
     );
   }
