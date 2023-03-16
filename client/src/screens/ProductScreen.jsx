@@ -97,7 +97,7 @@ const ProductScreen = () => {
                 </Heading>
                 <Stack spacing='5'>
                   <Box>
-                    <Text fontSize='xl'>${product.price}</Text>
+                    <Text fontSize='xl'>{product.price} €</Text>
                     <Flex>
                       <HStack spacing='2px'>
                         <StarIcon color='orange.500' />
@@ -129,7 +129,7 @@ const ProductScreen = () => {
                     <Flex alignItems='center'>
                       <BiPackage size='20px' />
                       <Text fontWeight='medium' fontSize='sm' ml='2'>
-                        Envío gratis al superar los $1000.
+                        Envío gratis al superar los 1000 €.
                       </Text>
                     </Flex>
                     <Flex alignItems='center'>

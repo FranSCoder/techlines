@@ -36,7 +36,7 @@ const CartItem = ({ cartItem }) => {
             </option>
           ))}
         </Select>
-        <Text fontWeight='bold'>${price}</Text>
+        <Text fontWeight='bold'>{price} €</Text>
         <CloseButton onClick={() => dispatch(removeCartItem(id))} />
       </Flex>
     </Flex>
