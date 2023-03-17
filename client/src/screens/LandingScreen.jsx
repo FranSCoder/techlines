@@ -29,7 +29,7 @@ const LandingScreen = () => (
         <Stack spacing={{ base: '8', lg: '10' }}>
           <Stack spacing={{ base: '2', lg: '4' }}>
             <Flex alignItems='center'>
-              <Icon as={GiTechnoHeart} h={12} w={12} color={useColorModeValue('orange.500', 'orange.300')} />
+              <Icon as={GiTechnoHeart} mr='6px' h={12} w={12} color={useColorModeValue('orange.500', 'orange.300')} />
               <Text fontSize='4xl' fontWeight='bold'>
                 Tech Lines
               </Text>

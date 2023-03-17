@@ -101,8 +101,14 @@ const ProductCard = ({ product }) => {
             €
           </Box>
         </Box>
-        <Tooltip label='Añadir al carrito' bg='white' placement='top' color='gray.800' fontSize='1.2em'>
-          <Button variant='ghost' display='flex' disabled={product.stock <= 0} onClick={() => addItem(product._id)}>
+        <Tooltip
+          label={product.stock <= 0 ? 'Sin stock' : 'Añadir al carrito'}
+          bg='white'
+          placement='top'
+          color='gray.800'
+          fontSize='1.2em'
+        >
+          <Button variant='ghost' display='flex' isDisabled={product.stock <= 0} onClick={() => addItem(product._id)}>
             <Icon as={FiShoppingCart} h={7} w={7} alignSelf='center' />
           </Button>
         </Tooltip>

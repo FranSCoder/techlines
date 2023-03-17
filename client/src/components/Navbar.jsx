@@ -21,7 +21,7 @@ import {
 import { Link as ReactLink } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { CgProfile } from 'react-icons/cg';
-import { MdLocalShipping, MdLogout } from 'react-icons/md';
+import { MdLocalShipping, MdLogout, MdOutlineAdminPanelSettings } from 'react-icons/md';
 import { FiShoppingCart } from 'react-icons/fi';
 import { GiTechnoHeart } from 'react-icons/gi';
 import { useState } from 'react';
@@ -90,8 +90,8 @@ const Navbar = () => {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <Flex alignItems='center'>
-              <Icon as={GiTechnoHeart} h={6} w={6} color={isHovering ? 'cyan.400' : 'orange.400 '} />
+            <Flex alignItems='center' mr='16px'>
+              <Icon as={GiTechnoHeart} mr='4px' h={6} w={6} color={isHovering ? 'cyan.400' : 'orange.400 '} />
               <Text fontWeight='extrabold'>Tech Lines</Text>
             </Flex>
           </Link>
@@ -125,6 +125,15 @@ const Navbar = () => {
                     <MdLocalShipping />
                     <Text ml='2'>Tus pedidos</Text>
                   </MenuItem>
+                  {userInfo.isAdmin && (
+                    <>
+                      <MenuDivider />
+                      <MenuItem as={ReactLink} to={'/admin-console'}>
+                        <MdOutlineAdminPanelSettings />
+                        <Text ml='2'>Consola Admin</Text>
+                      </MenuItem>
+                    </>
+                  )}
                   <MenuDivider />
                   <MenuItem onClick={logoutHandler}>
                     <MdLogout />
