@@ -24,8 +24,8 @@ export const login = (email, password) => async (dispatch) => {
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data
+          ? error.response.data
           : error.message
           ? error.message
           : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
@@ -54,8 +54,8 @@ export const register = (name, email, password) => async (dispatch) => {
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data
+          ? error.response.data
           : error.message
           ? error.message
           : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
@@ -82,8 +82,8 @@ export const updateProfile = (id, name, email, password) => async (dispatch, get
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data
+          ? error.response.data
           : error.message
           ? error.message
           : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
@@ -113,8 +113,8 @@ export const getUserOrders = () => async (dispatch, getState) => {
   } catch (error) {
     dispatch(
       setError(
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data
+          ? error.response.data
           : error.message
           ? error.message
           : 'Ocurrió un error inesperado. Por favor, inténtelo de nuevo más tarde.'
