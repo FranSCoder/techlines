@@ -121,11 +121,37 @@ const updateProduct = asyncHandler(async (req, res) => {
   }
 });
 
+const removeProductReview = asyncHandler(async (req, res) => {
+  const product = await Product.findById(req.params.productId);
+
+  const updatedReviews = product.reviews.filter((rev) => rev._id.valueOf() !== req.params.reviewId);
+
+  if (product) {
+    product.reviews = updatedReviews;
+
+    product.numberOfReviews = product.reviews.length;
+
+    if (product.numberOfReviews > 0) {
+      product.rating = product.reviews.reduce((acc, item) => item.rating + acc, 0) / product.reviews.length;
+    } else {
+      product.rating = 1;
+    }
+
+    await product.save();
+
+    res.status(201).json({ message: 'La valoración ha sido eliminada.' });
+  } else {
+    res.status(404);
+    throw new Error('No se pudo encontrar el producto.');
+  }
+});
+
 productRoutes.route('/').get(getProducts);
 productRoutes.route('/:id').get(getProduct);
 productRoutes.route('/reviews/:id').post(protectRoute, createProductReview);
 productRoutes.route('/').put(protectRoute, admin, updateProduct);
 productRoutes.route('/:id').delete(protectRoute, admin, deleteProduct);
 productRoutes.route('/').post(protectRoute, admin, createNewProduct);
+productRoutes.route('/:productId/:reviewId').put(protectRoute, admin, removeProductReview);
 
 export default productRoutes;
