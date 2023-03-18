@@ -26,7 +26,7 @@ const Footer = () => (
       >
         <Stack spacing={{ base: '6', md: '8' }} align='start'>
           <Flex alignItems='center'>
-            <Icon as={GiTechnoHeart} h={10} w={10} color='orange.400' />
+            <Icon as={GiTechnoHeart} mr='4px' h={10} w={10} color='orange.400' />
             <Text fontSize='2xl' fontWeight='extrabold'>
               Tech Lines
             </Text>
