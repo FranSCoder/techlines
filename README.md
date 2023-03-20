@@ -1,4 +1,4 @@
-# [Tech Lines](https://techlines-uoaa.onrender.com/) - Tienda de tecnología online
+# [Tech Lines](https://techlines-uoaa.onrender.com/) - Tienda de tecnología online :iphone:
 
 ## Consideraciones previas :thinking:
 
