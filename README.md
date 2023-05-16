@@ -1,9 +1,5 @@
 # [Tech Lines](https://techlines-uoaa.onrender.com/) - Tienda de tecnología online :iphone:
 
-## Consideraciones previas :thinking:
-
-Al ser Tech Lines una web puramente instructiva, está desplegada en los servidores gratuitos de Render.com. Este plan gratuito tiene la peculiaridad de que "desasigna" o apaga los servidores de mi aplicación tras 15 minutos de inactividad. Por ello, es necesaria un poco de paciencia en la primera carga del navegador, ya que puede tardar unos 30 segundos.
-
 ## ¿En qué consiste? :bulb:
 
 Tech Lines es una tienda online de productos tecnológicos totalmente operativa. El usuario puede crearse una cuenta y hacer pedidos inmediatamente, admite pagos por PayPal, SOFORT o tarjeta. Los datos de usuarios, productos y pedidos se almacenan en una colección de MongoDB. Es totalmente adaptativo a pantallas pequeñas.
